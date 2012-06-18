@@ -8,7 +8,7 @@ class RubyAssignment
     def self.findOccurance
         result1=@string1.scan("RUBY")
         result2=@string1.scan("RUBY").count()
-        puts "\n\nResult: #{result1} \n'RUBY' Found #{result2} times in string.\n\n"
+        puts "\nResult: #{result1} \n'RUBY' Found #{result2} times in string.\n"
     end
 end
 
