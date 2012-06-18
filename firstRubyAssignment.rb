@@ -10,7 +10,18 @@ class RubyAssignment
         result2=@string1.scan("RUBY").count()
         puts "\n\nResult: #{result1} \n'RUBY' Found #{result2} times in string.\n\n"
     end
+    
+     def self.findPosition
+        result=@string1.to_enum(:scan,/RUBY/).map {Regexp.last_match.begin(0)}
+        print "\n\n'RUBY' Found at "
+        for i in 0..result.length-1
+        print result[i]+1
+        print ", "
+        end
+        print "positions in string.\n\n"
+    end
 end
 
 
 RubyAssignment.findOccurance
+RubyAssignment.findPosition
